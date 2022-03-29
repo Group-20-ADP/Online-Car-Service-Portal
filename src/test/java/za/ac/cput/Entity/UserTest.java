@@ -16,6 +16,6 @@ class UserTest {
                 .setUserEmail("218138105@mycput.ac.za")
                 .setUserName("Kurtney")
                 .build();
-        System.out.println(user);
+        assertEquals(user,user);
     }
 }
