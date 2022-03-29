@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTest {
     @Test
     public void test() {
-
         User user = new User.UserBuilder()
                 .setUserID(1)
                 .setUserEmail("218138105@mycput.ac.za")
