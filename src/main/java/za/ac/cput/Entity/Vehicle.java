@@ -60,7 +60,7 @@ public class Vehicle {
         private int vehicleID;
         private String make, model, type, year;
 
-        public vehicleBuilder setVehicleBuilder(int vehicleID) {
+        public vehicleBuilder setVehicleID(int vehicleID) {
             this.vehicleID = vehicleID;
             return this;
         }
