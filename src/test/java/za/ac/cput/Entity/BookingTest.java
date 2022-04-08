@@ -1,3 +1,7 @@
+/**Test for Booking Entity
+ Author: Manasseh Barnes (218009615)
+ Milestone: Builder Pattern Implementation - first deliverable
+ */
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
