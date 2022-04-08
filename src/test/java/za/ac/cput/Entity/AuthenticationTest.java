@@ -12,8 +12,7 @@ class AuthenticationTest {
     //Test for Authentication class
     @Test
     public void test() {
-        Authentication authentication = new Authentication.authBuilder()
-                //Will Replace the default values once other classes are implemented
+        Authentication authentication = Authentication.builder()
                 .username("admin")
                 .password("admin")
                 .build();

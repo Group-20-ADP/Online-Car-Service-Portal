@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class RoleTest {
     @Test
     public void test() {
-        Role roleCustomer = new Role.RoleBuilder()
-                .setRoleID(1)
-                .setRoleName("Customer")
-                .build();
+        Role roleCustomer = Role.builder()
+            .roleID(1)
+            .name("Customer")
+            .build();
         System.out.println(roleCustomer);
     }
 }

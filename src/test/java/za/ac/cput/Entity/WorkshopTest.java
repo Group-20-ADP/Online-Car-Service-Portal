@@ -8,12 +8,11 @@ class WorkshopTest {
 
     @Test
     public void test() {
-        Workshop workshop = new Workshop.WorkshopBuilder()
-                .setWorkshopID(12)
-                .setWorkshopLocation("Athlone")
-                .setWorkshopName("Caltex Motors")
-                .build();
-
+        Workshop workshop = Workshop.builder()
+            .workshopID(12)
+            .workshopLocation("Athlone")
+            .workshopName("Caltex Motors")
+            .build();
         System.out.println(workshop);
         assertEquals(workshop, workshop);
     }
