@@ -1,0 +1,20 @@
+package za.ac.cput.Entity;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class AuthenticationTest {
+    //Test for Authentication class
+    @Test
+    public void test() {
+        Authentication authentication = new Authentication.authBuilder()
+                //Will Replace the default values once other classes are implemented
+                .username("admin")
+                .password("admin")
+                .build();
+        System.out.println(authentication);
+        assertEquals("admin", authentication.getUsername());
+        assertEquals("admin", authentication.getPassword());
+    }
+}
