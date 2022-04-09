@@ -1,5 +1,13 @@
 package za.ac.cput.Entity;
 
+/*Author
+  Moegamad Nur Duncan 220014442
+* Builder Pattern for Workshop Entity
+*
+*
+*
+* */
+
 public class Workshop {
 
     private int workshopID;
@@ -36,6 +44,7 @@ public class Workshop {
         this.workshopLocation = workshopLocation;
     }
 
+    //Builder
     static class WorkshopBuilder {
         private int workshopID;
         private String workshopName;
