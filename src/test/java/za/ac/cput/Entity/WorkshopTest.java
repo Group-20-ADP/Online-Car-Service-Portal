@@ -1,6 +1,7 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
+import za.ac.cput.Factory.WorkshopFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class WorkshopTest {
 
     @Test
-    public void test() {
+    public void testBuilder() {
         Workshop workshop = new Workshop.WorkshopBuilder()
                 .setWorkshopID(12)
                 .setWorkshopLocation("Athlone")
@@ -23,5 +24,14 @@ class WorkshopTest {
 
         System.out.println(workshop);
         assertEquals(workshop, workshop);
+    }
+@Test
+    public void testFactory() {
+
+        Workshop workshop  = WorkshopFactory.createWorkshop(25, "Crawford Motors", "Crawford");
+        System.out.println(workshop);
+        assertNotNull(workshop);
+
+
     }
 }

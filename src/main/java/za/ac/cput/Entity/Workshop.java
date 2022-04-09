@@ -14,7 +14,7 @@ public class Workshop {
     private String workshopName;
     private String workshopLocation;
 
-    private Workshop (WorkshopBuilder builder) {
+    public Workshop (WorkshopBuilder builder) {
         this.workshopID = builder.workshopID;
         this.workshopName = builder.workshopName;
         this.workshopLocation = builder.workshopLocation;
@@ -45,7 +45,7 @@ public class Workshop {
     }
 
     //Builder
-    static class WorkshopBuilder {
+    public static class WorkshopBuilder {
         private int workshopID;
         private String workshopName;
         private String workshopLocation;

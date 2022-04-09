@@ -1,6 +1,7 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
+import za.ac.cput.Factory.ReportFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 * */
 class ReportTest {
     @Test
-    public void test() {
+    public void testBuilder() {
         Report report = new Report.ReportBuilder()
                 .setReportID(45)
                 .setReportType("Turbo Leak")
@@ -21,5 +22,14 @@ class ReportTest {
 
         System.out.println(report);
         assertEquals(report, report);
+    }
+
+    @Test
+    public void testFactory() {
+
+        Report report = ReportFactory.createReport(21, "Blown Head Gasket");
+        System.out.println(report);
+        assertNotNull(report);
+
     }
 }
