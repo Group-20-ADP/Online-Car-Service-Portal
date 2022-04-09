@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 *
 *
 * */
+//Builder Test
 class WorkshopTest {
 
     @Test
@@ -25,6 +26,8 @@ class WorkshopTest {
         System.out.println(workshop);
         assertEquals(workshop, workshop);
     }
+
+    //Factory Test
 @Test
     public void testFactory() {
 

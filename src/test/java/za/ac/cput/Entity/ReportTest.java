@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 *
 *
 * */
+//Builder Test
 class ReportTest {
     @Test
     public void testBuilder() {
@@ -23,7 +24,7 @@ class ReportTest {
         System.out.println(report);
         assertEquals(report, report);
     }
-
+    //Factory Test
     @Test
     public void testFactory() {
 
