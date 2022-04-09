@@ -1,6 +1,7 @@
 package za.ac.cput.Impl;
 
 import za.ac.cput.Entity.Admin;
+import za.ac.cput.Factory.AdminFactory;
 import za.ac.cput.repository.AdminIRepository;
 
 import java.util.ArrayList;
@@ -38,7 +39,10 @@ public class AdminRepository implements AdminIRepository {
 
     @Override
     public Object create(Object a) {
-        return !adminList.add((Admin) a) ? true : false ;
+        boolean success = adminSet.add((Admin) a);
+        if(!success)
+            return null;
+        return a;
     }
 
     @Override
@@ -58,7 +62,7 @@ public class AdminRepository implements AdminIRepository {
 
 
     @Override
-    public Object delete(Object o) {
-        return null;
+    public boolean delete(Object o) {
+        return true;
     }
 }

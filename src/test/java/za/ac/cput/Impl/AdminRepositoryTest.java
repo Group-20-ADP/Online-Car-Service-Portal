@@ -11,6 +11,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AdminRepositoryTest {
+    private static AdminRepository adminRepository = AdminRepository.getRepository();
+    private static Role role = RoleFactory.createRole(1,"SuperVisor");
+    private static Admin admin = AdminFactory.createAdmin(1,role, "Kurtney" , "kuj@msk.com", "32dJ799(0");
 
     @Test
     void getRepository() {
@@ -26,15 +29,9 @@ class AdminRepositoryTest {
 
     @Test
     void create() {
-         Role role = RoleFactory.createRole(1,"Administrator");
-         Admin admin = AdminFactory.createAdmin(2, role, "Kurtney",
-                 "kurt17@gmail.com","as92^ds&&9");
-         AdminRepository obj = AdminRepository.getRepository();
+         //Admin adminCreated = adminRepository.create((Object) admin);
 
-         obj.create(admin);
-         //List<Admin> list = obj.getListAdmins();
-         System.out.println(obj.read(2));
-        // assertNotNull(list);
+
     }
 
     @Test

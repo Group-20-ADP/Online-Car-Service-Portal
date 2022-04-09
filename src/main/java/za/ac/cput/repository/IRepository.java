@@ -4,5 +4,5 @@ public interface IRepository<T, KEY> {
     T create(T t);
     T update(T t);
     T read(KEY key);
-    T delete(T t);
+    boolean delete(KEY key);
 }
