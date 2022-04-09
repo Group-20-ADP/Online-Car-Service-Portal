@@ -1,6 +1,7 @@
 /**Entity for the User
  Author: Kurtney Clyde Jantjies (218138105)
  MileStone Date: 28 March 2022s
+ *
  */
 package za.ac.cput.Entity;
 
