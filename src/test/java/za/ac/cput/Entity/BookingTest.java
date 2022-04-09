@@ -12,7 +12,7 @@ class BookingTest {
     //Test for booking class
     @Test
     public void test() {
-        Booking booking = new Booking.bookingBuilder()
+        Booking booking = Booking.builder()
                 //will Replace the default with the actual values once other classes are implemented
                 .bookingID(1)
                 .customerID(1)

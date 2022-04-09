@@ -12,13 +12,13 @@ class VehicleTest {
 
     @Test
     public void test() {
-        Vehicle vehicle = new Vehicle.vehicleBuilder()
-                .setVehicleID(2)
-                .setMake("Opel")
-                .setModel("Corsa")
-                .setType("Hatchback")
-                .setYear("2008")
-                .build();
+        Vehicle vehicle = Vehicle.builder()
+            .vehicleID(2)
+            .make("Opel")
+            .model("Corsa")
+            .type("Hatchback")
+            .year("2008")
+            .build();
         System.out.println(vehicle);
         assertEquals(vehicle, vehicle);
     }

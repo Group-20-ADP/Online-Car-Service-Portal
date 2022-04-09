@@ -11,11 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTest {
     @Test
     public void test() {
-        User user = new User.UserBuilder()
-                .setUserID(1)
-                .setUserEmail("218138105@mycput.ac.za")
-                .setUserName("Kurtney")
-                .build();
+        User user = User.builder()
+            .userID(1)
+            .userEmail("218138105@mycput.ac.za")
+            .userName("Kurtney")
+            .build();
         assertEquals(user,user);
     }
 }
