@@ -8,7 +8,7 @@ public class Vehicle {
     private int vehicleID;
     private String make, model, type, year;
 
-    private Vehicle(vehicleBuilder builder) {
+    public Vehicle(vehicleBuilder builder) {
         this.vehicleID = builder.vehicleID;
         this.make = builder.make;
         this.model = builder.model;
@@ -56,7 +56,7 @@ public class Vehicle {
         this.year = year;
     }
 
-    static class vehicleBuilder {
+    public static class vehicleBuilder {
         private int vehicleID;
         private String make, model, type, year;
 

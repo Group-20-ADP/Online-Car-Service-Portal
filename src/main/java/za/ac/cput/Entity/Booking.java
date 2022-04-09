@@ -11,7 +11,7 @@ public class Booking {
     private int serviceID;
     private int workshopID;
 
-    private Booking(bookingBuilder builder){
+    public Booking(bookingBuilder builder){
         this.bookingID = builder.bookingID;
         this.vehicleID = builder.vehicleID;
         this.customerID = builder.customerID;
@@ -59,7 +59,7 @@ public class Booking {
         this.workshopID = workshopID;
     }
 
-    static class bookingBuilder {
+    public static class bookingBuilder {
         private int bookingID;
         private int vehicleID;
         private int customerID;
