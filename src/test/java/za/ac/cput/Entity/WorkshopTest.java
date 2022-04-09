@@ -4,6 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/*Author
+  Moegamad Nur Duncan 220014442
+* Builder Pattern Test for Workshop Entity
+*
+*
+*
+* */
 class WorkshopTest {
 
     @Test
