@@ -1,6 +1,6 @@
-/**Entity for the User
+/**
  Author: Kurtney Clyde Jantjies (218138105)
- MileStone Date: 28 March 2022s
+ MileStone Date:
  */
 package za.ac.cput.Entity;
 
@@ -10,11 +10,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RoleTest {
     @Test
-    public void test() {
+    public void testBuilder() {
         Role roleCustomer = new Role.RoleBuilder()
                 .setRoleID(1)
                 .setRoleName("Customer")
                 .build();
         System.out.println(roleCustomer);
+    }
+
+    @Test
+    public void testFactory(){
+
+    }
+
+    @Test
+    public void testRepository(){
+
     }
 }
