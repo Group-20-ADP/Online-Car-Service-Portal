@@ -6,6 +6,7 @@ package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Factory.VehicleFactory;
+import za.ac.cput.Utilities.Helper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +15,7 @@ class VehicleTest {
     @Test
     public void testBuilder() {
         Vehicle vehicle = new Vehicle.vehicleBuilder()
-                .setVehicleID(2)
+                .setVehicleID(Helper.generateID())
                 .setMake("Opel")
                 .setModel("Corsa")
                 .setType("Hatchback")
@@ -26,7 +27,7 @@ class VehicleTest {
 
     @Test
     public void testFactory() {
-        Vehicle vehicle = VehicleFactory.createVehicle(2, "Opel", "Corsa", "Hatchback", "2008");
+        Vehicle vehicle = VehicleFactory.createVehicle("", "Opel", "Corsa", "Hatchback", "2008");
         System.out.println(vehicle);
         assertEquals(vehicle, vehicle);
     }
