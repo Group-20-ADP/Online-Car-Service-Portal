@@ -1,3 +1,7 @@
+/**Entity : AuthenticationRepository
+ Author: Manasseh Barnes (218009615)
+ Milestone: Repository Implementation - first deliverable
+ */
 package za.ac.cput.Impl;
 
 import za.ac.cput.Entity.Authentication;
@@ -21,7 +25,7 @@ public class AuthRepository implements AuthIRepository {
     @Override
     public Authentication create(Authentication authentication) {
         boolean success = authDB.add(authentication);
-        if(!success) return null;
+        if (!success) return null;
         return authentication;
     }
 

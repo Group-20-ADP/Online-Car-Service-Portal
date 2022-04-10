@@ -1,3 +1,7 @@
+/**Entity : BookingFactory
+ Author: Manasseh Barnes (218009615)
+ Milestone: Factory Implementation - first deliverable
+ */
 package za.ac.cput.Factory;
 
 import za.ac.cput.Entity.*;

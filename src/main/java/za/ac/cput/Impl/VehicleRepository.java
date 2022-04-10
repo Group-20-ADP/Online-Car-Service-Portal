@@ -1,3 +1,7 @@
+/**Entity : VehicleRepository
+ Author: Manasseh Barnes (218009615)
+ Milestone: Repository Implementation - first deliverable
+ */
 package za.ac.cput.Impl;
 
 import za.ac.cput.Entity.Vehicle;
