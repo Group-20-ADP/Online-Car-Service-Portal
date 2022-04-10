@@ -5,10 +5,10 @@
 package za.ac.cput.Entity;
 
 public class Vehicle {
-    private int vehicleID;
+    private String vehicleID;
     private String make, model, type, year;
 
-    private Vehicle(vehicleBuilder builder) {
+    public Vehicle(vehicleBuilder builder) {
         this.vehicleID = builder.vehicleID;
         this.make = builder.make;
         this.model = builder.model;
@@ -16,11 +16,11 @@ public class Vehicle {
         this.year = builder.year;
     }
 
-    public int getVehicleID() {
+    public String getVehicleID() {
         return vehicleID;
     }
 
-    public void setVehicleID(int vehicleID) {
+    public void setVehicleID(String vehicleID) {
         this.vehicleID = vehicleID;
     }
 
@@ -56,11 +56,11 @@ public class Vehicle {
         this.year = year;
     }
 
-    static class vehicleBuilder {
-        private int vehicleID;
+    public static class vehicleBuilder {
+        private String vehicleID;
         private String make, model, type, year;
 
-        public vehicleBuilder setVehicleID(int vehicleID) {
+        public vehicleBuilder setVehicleID(String vehicleID) {
             this.vehicleID = vehicleID;
             return this;
         }

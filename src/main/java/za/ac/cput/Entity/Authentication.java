@@ -5,7 +5,7 @@
 package za.ac.cput.Entity;
 
 public class Authentication {
-    private int authID;
+    private String authID;
     private String username;
     private String password;
 
@@ -17,11 +17,11 @@ public class Authentication {
     }
 
     //Getters and setters
-    public int getAuthID() {
+    public String getAuthID() {
         return authID;
     }
 
-    public void setAuthID(int authID) {
+    public void setAuthID(String authID) {
         this.authID = authID;
     }
 
@@ -43,11 +43,11 @@ public class Authentication {
 
     //Builder
     public static class authBuilder{
-        private int authID;
+        private String authID;
         private String username;
         private String password;
 
-        public authBuilder authID(int authID){
+        public authBuilder authID(String authID){
             this.authID = authID;
             return this;
         }

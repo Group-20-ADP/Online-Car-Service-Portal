@@ -5,13 +5,13 @@
 package za.ac.cput.Entity;
 
 public class Booking {
-    private int bookingID;
-    private int vehicleID;
-    private int customerID;
-    private int serviceID;
-    private int workshopID;
+    private static String bookingID;
+    private String vehicleID;
+    private String customerID;
+    private String serviceID;
+    private String workshopID;
 
-    private Booking(bookingBuilder builder){
+    public Booking(bookingBuilder builder){
         this.bookingID = builder.bookingID;
         this.vehicleID = builder.vehicleID;
         this.customerID = builder.customerID;
@@ -19,70 +19,70 @@ public class Booking {
         this.workshopID = builder.workshopID;
     }
 
-    public int getBookingID() {
+    public static String getBookingID() {
         return bookingID;
     }
 
-    public void setBookingID(int bookingID) {
+    public void setBookingID(String bookingID) {
         this.bookingID = bookingID;
     }
 
-    public int getVehicleID() {
+    public String getVehicleID() {
         return vehicleID;
     }
 
-    public void setVehicleID(int vehicleID) {
+    public void setVehicleID(String vehicleID) {
         this.vehicleID = vehicleID;
     }
 
-    public int getCustomerID() {
+    public String getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(int customerID) {
+    public void setCustomerID(String customerID) {
         this.customerID = customerID;
     }
 
-    public int getServiceID() {
+    public String getServiceID() {
         return serviceID;
     }
 
-    public void setServiceID(int serviceID) {
+    public void setServiceID(String serviceID) {
         this.serviceID = serviceID;
     }
 
-    public int getWorkshopID() {
+    public String getWorkshopID() {
         return workshopID;
     }
 
-    public void setWorkshopID(int workshopID) {
+    public void setWorkshopID(String workshopID) {
         this.workshopID = workshopID;
     }
 
-    static class bookingBuilder {
-        private int bookingID;
-        private int vehicleID;
-        private int customerID;
-        private int serviceID;
-        private int workshopID;
+    public static class bookingBuilder {
+        private String bookingID;
+        private String vehicleID;
+        private String customerID;
+        private String serviceID;
+        private String workshopID;
 
-        public bookingBuilder bookingID(int bookingID){
+        public bookingBuilder bookingID(String bookingID){
             this.bookingID = bookingID;
             return this;
         }
-        public bookingBuilder vehicleID(int vehicleID){
+        public bookingBuilder vehicleID(String vehicleID){
             this.vehicleID = vehicleID;
             return this;
         }
-        public bookingBuilder customerID(int customerID){
+        public bookingBuilder customerID(String customerID){
             this.customerID = customerID;
             return this;
         }
-        public bookingBuilder serviceID(int serviceID){
+        public bookingBuilder serviceID(String serviceID){
             this.serviceID = serviceID;
             return this;
         }
-        public bookingBuilder workshopID(int workshopID){
+        public bookingBuilder workshopID(String workshopID){
             this.workshopID = workshopID;
             return this;
         }
