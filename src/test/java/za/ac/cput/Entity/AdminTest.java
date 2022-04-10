@@ -1,12 +1,11 @@
 /**
- Author: Kurtney Clyde Jantjies (218138105)
- MileStone Date:
+  Author: Kurtney Clyde Jantjies (218138105)
+  MileStone Date:
  */
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Factory.AdminFactory;
-import za.ac.cput.Factory.UserFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
