@@ -35,7 +35,7 @@ public class Report {
     }
 
     //Builder
-    static class ReportBuilder {
+    public static class ReportBuilder {
         private int reportID;
         private String reportType;
 
