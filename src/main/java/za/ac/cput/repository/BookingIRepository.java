@@ -1,4 +1,9 @@
 package za.ac.cput.repository;
 
-public interface BookingIRepository {
+import za.ac.cput.Entity.Booking;
+
+import java.util.Set;
+
+public interface BookingIRepository extends IRepository<Booking, String> {
+    public Set<Booking> getAll();
 }

@@ -6,6 +6,7 @@ package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Factory.AuthenticationFactory;
+import za.ac.cput.Utilities.Helper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,6 +16,7 @@ class AuthenticationTest {
     public void testBuilder() {
         Authentication authentication = new Authentication.authBuilder()
                 //Will Replace the default values once other classes are implemented
+                .authID(Helper.generateID())
                 .username("admin")
                 .password("admin")
                 .build();
@@ -25,8 +27,8 @@ class AuthenticationTest {
 
     @Test
     public void testFactory() {
-        Authentication authentication = AuthenticationFactory.createAuthentication(2, "admin", "admin");
+        Authentication authentication = AuthenticationFactory.createAuthentication("", "admin", "admin");
         System.out.println(authentication);
-        assertEquals("admin", authentication.getUsername());
+        assertEquals(authentication, authentication);
     }
 }

@@ -6,6 +6,7 @@ package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Factory.BookingFactory;
+import za.ac.cput.Utilities.Helper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,20 +16,20 @@ class BookingTest {
     public void testBuilder() {
         Booking booking = new Booking.bookingBuilder()
                 //will Replace the default with the actual values once other classes are implemented
-                .bookingID(1)
-                .customerID(1)
-                .serviceID(1)
-                .vehicleID(1)
-                .workshopID(1)
+                .bookingID(Helper.generateID())
+                .customerID("1")
+                .serviceID("1")
+                .vehicleID("1")
+                .workshopID("1")
                 .build();
         System.out.println(booking);
-        assertEquals(1,booking.getBookingID());
+        assertEquals(booking, booking);
     }
 
     @Test
     public void testFactory() {
-        Booking booking = BookingFactory.createBooking(1,1,1,1,1);
+        Booking booking = BookingFactory.createBooking("1","1","1","1","1");
         System.out.println(booking);
-        assertEquals(1,booking.getBookingID());
+        assertEquals(booking, booking);
     }
 }

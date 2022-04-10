@@ -1,4 +1,9 @@
 package za.ac.cput.repository;
 
-public interface AuthIRepository {
+import za.ac.cput.Entity.Authentication;
+
+import java.util.Set;
+
+public interface AuthIRepository extends IRepository<Authentication, String> {
+    public Set<Authentication> getAll();
 }
