@@ -1,3 +1,6 @@
+/**
+ Author: Kurtney Clyde Jantjies (218138105)
+ */
 package za.ac.cput.repository;
 
 import za.ac.cput.Entity.Admin;
