@@ -17,32 +17,40 @@ class AdminRepositoryTest {
 
     @Test
     void getRepository() {
-    }
-
-    @Test
-    void getListAdmins() {
+        AdminRepository adminRepo = adminRepository;
+        assertNotNull(adminRepo);
     }
 
     @Test
     void getSetAdmins() {
+        System.out.println(adminRepository.getSetAdmins());
+        assertNotNull(adminRepository.getSetAdmins());
     }
 
     @Test
     void create() {
-         //Admin adminCreated = adminRepository.create((Object) admin);
-
-
+        Admin adminCreated = (Admin) adminRepository.create(admin);
+        assertEquals(admin.getAdminID(), adminCreated.getAdminID());
     }
 
     @Test
     void update() {
+        adminRepository.create(admin);
+        Admin updatesAdmin = new Admin.AdminBuilder().copy(admin)
+                .setAdminEmail("ds2@ds.com")
+                .build();
+        assertNotNull(adminRepository.update(updatesAdmin));
     }
 
     @Test
     void read() {
+        Admin admin = adminRepository.read(1);
+        assertNotNull(admin);
     }
 
     @Test
     void delete() {
+        boolean status = adminRepository.delete(admin.getAdminID());
+        assertTrue(status);
     }
 }
