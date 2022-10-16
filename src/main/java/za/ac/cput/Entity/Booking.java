@@ -1,113 +1,36 @@
-/**Entity for Booking Entity
+/**Entity for BookingRepository Entity
  Author: Manasseh Barnes (218009615)
  Milestone: Builder Pattern Implementation - first deliverable
  */
-package za.ac.cput.Entity;
+package za.ac.cput.demo_car_service_portal.entity;
 
-public class Booking {
-    private static String bookingID;
-    private String vehicleID;
-    private String customerID;
-    private String serviceID;
-    private String workshopID;
+import com.sun.istack.NotNull;
+import lombok.*;
 
-    public Booking(bookingBuilder builder){
-        this.bookingID = builder.bookingID;
-        this.vehicleID = builder.vehicleID;
-        this.customerID = builder.customerID;
-        this.serviceID = builder.serviceID;
-        this.workshopID = builder.workshopID;
-    }
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
-    public static String getBookingID() {
-        return bookingID;
-    }
 
-    public void setBookingID(String bookingID) {
-        this.bookingID = bookingID;
-    }
+@Getter
+@ToString
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Booking implements Serializable {
+    @Column(name = "booking_id", length = 10)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    private long bookingID;
+    private Date date;
+    private String duration;
+    @JoinColumn(name = "custId")
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Customer  customerId;
+    @JoinColumn(name = "vehicleID")
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Vehicle> vehicleID;
 
-    public String getVehicleID() {
-        return vehicleID;
-    }
-
-    public void setVehicleID(String vehicleID) {
-        this.vehicleID = vehicleID;
-    }
-
-    public String getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(String customerID) {
-        this.customerID = customerID;
-    }
-
-    public String getServiceID() {
-        return serviceID;
-    }
-
-    public void setServiceID(String serviceID) {
-        this.serviceID = serviceID;
-    }
-
-    public String getWorkshopID() {
-        return workshopID;
-    }
-
-    public void setWorkshopID(String workshopID) {
-        this.workshopID = workshopID;
-    }
-
-    public static class bookingBuilder {
-        private String bookingID;
-        private String vehicleID;
-        private String customerID;
-        private String serviceID;
-        private String workshopID;
-
-        public bookingBuilder bookingID(String bookingID){
-            this.bookingID = bookingID;
-            return this;
-        }
-        public bookingBuilder vehicleID(String vehicleID){
-            this.vehicleID = vehicleID;
-            return this;
-        }
-        public bookingBuilder customerID(String customerID){
-            this.customerID = customerID;
-            return this;
-        }
-        public bookingBuilder serviceID(String serviceID){
-            this.serviceID = serviceID;
-            return this;
-        }
-        public bookingBuilder workshopID(String workshopID){
-            this.workshopID = workshopID;
-            return this;
-        }
-
-        public bookingBuilder copy(Booking booking){
-            this.bookingID = booking.bookingID;
-            this.vehicleID = booking.vehicleID;
-            this.customerID = booking.customerID;
-            this.serviceID = booking.serviceID;
-            this.workshopID = booking.workshopID;
-            return this;
-        }
-
-        public Booking build(){
-            return new Booking(this);
-        }
-    }
-    @Override
-    public String toString() {
-        return "Booking{" +
-                "bookingID=" + bookingID +
-                ", vehicleID=" + vehicleID +
-                ", customerID=" + customerID +
-                ", serviceID=" + serviceID +
-                ", workshopID=" + workshopID +
-                '}';
-    }
 }

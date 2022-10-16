@@ -1,22 +1,18 @@
-/**Entity : BookingFactory
- Author: Manasseh Barnes (218009615)
- Milestone: Factory Implementation - first deliverable
- */
-package za.ac.cput.Factory;
+package za.ac.cput.demo_car_service_portal.factory;
 
-import za.ac.cput.Entity.*;
-import za.ac.cput.Utilities.Helper;
+import za.ac.cput.demo_car_service_portal.entity.Booking;
+import za.ac.cput.demo_car_service_portal.util.Helper;
+
+import java.util.Date;
 
 public class BookingFactory {
-    public static Booking createBooking(String bookingID, String vehicleID, String customerID, String serviceID, String workshopID) {
+    public static Booking createBooking( String name, String location) {
+        Helper.checkStringParam(name, "Name");
+        Helper.checkStringParam(location, "Location");
 
-        String setBookingID = Helper.generateID();
-        return new Booking.bookingBuilder()
-                .bookingID(setBookingID)
-                .vehicleID(vehicleID)
-                .customerID(customerID)
-                .serviceID(serviceID)
-                .workshopID(workshopID)
+        return Booking.builder()
+                .date(new Date())
+
                 .build();
     }
 }
