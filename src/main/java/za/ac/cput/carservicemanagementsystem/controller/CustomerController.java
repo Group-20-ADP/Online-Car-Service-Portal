@@ -6,8 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import za.ac.cput.demo_car_service_portal.entity.Customer;
-import za.ac.cput.demo_car_service_portal.service.impl.CustomerServiceImpl;
+import za.ac.cput.carservicemanagementsystem.entity.Customer;
+import za.ac.cput.carservicemanagementsystem.service.impl.CustomerServiceImpl;
 
 import java.util.List;
 
